@@ -2,13 +2,13 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
   <head>
     <meta charset="utf-8">
+    <title>Newsletter title - edition</title>
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="x-apple-disable-message-reformatting">
     <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no">
     <meta name="color-scheme" content="light">
     <meta name="supported-color-schemes" content="light">
-    <title></title>
 
     <!--[if gte mso 9]>
     <xml>
@@ -64,7 +64,16 @@
       }
 
       a {
-        text-decoration: none;
+        color: #4054b8;
+        text-decoration: underline;
+      }
+
+      a:hover {
+        color: #E9044A;
+      }
+
+      a:focus {
+        color: #000000;
       }
 
       img {
@@ -122,9 +131,16 @@
 
       .button-td-primary:hover,
       .button-a-primary:hover {
-        background: #555555 !important;
-        border-color: #555555 !important;
+        background: #C4033D !important;
+        border-color: #C4033D !important;
       }
+
+      .button-td-primary:focus,
+      .button-a-primary:focus {
+        background: #000 !important;
+        border-color: #000 !important;
+      }
+
 
       @media screen and (max-width: 600px) {
         .email-container {
@@ -170,7 +186,9 @@
         <!-- Email Header : BEGIN -->
         <tr>
         <td style="background-color: #ffffff; padding: 10px 10px 5px;">
-          <img src="assets/images/medibank-logo.png" width="180" height="76" alt="Medibank - Live Better" border="0" style="height: auto; background: #ffffff; font-family: sans-serif; font-size: 16px; line-height: 16px; color: #333333;">
+          <header>
+            <img src="assets/images/medibank-logo.png" width="180" height="76" alt="Medibank - Live Better" border="0" style="height: auto; background: #ffffff; font-family: sans-serif; font-size: 16px; line-height: 16px; color: #333333;">           
+          </header>
           </td>
         </tr>
         <!-- Email Header : END -->
@@ -189,13 +207,15 @@
             <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
               <tr>
                 <td style="padding: 40px; font-family: sans-serif; font-size: 16px; line-height: 24px; color: #333333;">
-                  <h1 style="margin: 0 0 20px; font-size: 28px; line-height: 28px; color: #111826; font-weight: normal;">Main email heading</h1>
-                  <p style="margin: 0 0 10px;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.</p>
-                  <ul style="padding: 0; margin: 0; list-style-type: disc;">
-                    <li style="margin:0 0 0 20px;">A list item.</li>
-                    <li style="margin:0 0 0 20px;">Another list item here.</li>
-                    <li style="margin: 0 0 0 20px;">Yet another list item.</li>
-                  </ul>
+                  <main>  
+                    <h1 style="margin: 0 0 20px; font-size: 28px; line-height: 28px; color: #111826; font-weight: normal;">Main email heading</h1>
+                    <p style="margin: 0 0 10px;">Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut&nbsp;erat.</p>
+                    <ul style="padding: 0; margin: 0; list-style-type: disc;">
+                      <li style="margin:0 0 0 20px;">A list item.</li>
+                      <li style="margin:0 0 0 20px;">Another list item here.</li>
+                      <li style="margin: 0 0 0 20px;">Yet another list item.</li>
+                    </ul>
+                  </main>
                 </td>
               </tr>
               <tr>
@@ -204,7 +224,7 @@
                   <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: auto;">
                     <tr>
                       <td class="button-td button-td-primary" style="border-radius: 4px; background: #E9044A;">
-                        <a class="button-a button-a-primary" href="#" style="background: #E9044A; border: 1px solid #E9044A; font-family: sans-serif; font-size: 18px; line-height: 18px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; border-radius: 6px;">Log in now</a>
+                        <a class="button-a button-a-primary" href="#primary" style="background: #E9044A; border: 1px solid #E9044A; font-family: sans-serif; font-size: 18px; line-height: 18px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; border-radius: 6px;">Log in now</a>
                       </td>
                     </tr>
                   </table>
@@ -369,6 +389,101 @@
           </td>
         </tr>
         <!-- Thumbnail Right, Text Left : END -->
+
+        <!-- Horizontal Rule : BEGIN -->
+        <tr>
+          <td width="100%" style="padding: 0 40px; background-color: #ffffff;">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td style="padding: 0; height: 1px; background: #aaaaaa;"></td>
+              </tr>
+            </table>           
+          </td>
+        </tr>
+        <!-- Horizontal Rule : END -->
+
+        <!-- 3 Even Columns : BEGIN -->
+        <tr>
+          <td style="padding: 20px; background-color: #ffffff;">
+            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+              <tr>
+                
+                <!-- Column : BEGIN -->
+                <td valign="top" width="33.33%" class="stack-column-center">
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr>
+                      <td style="padding: 20px;">
+                        <img src="assets/images/brooks.png" width="170" height="" alt="Brooks logo" border="0" style="width: 100%; max-width: 170px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; padding: 0 20px 20px; text-align: left;">
+                        <p style="margin: 0;"><a href="#brooks">$50 Brooks gift card<br>5000 points</a></p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <!-- Column : END -->
+
+                <!-- Column : BEGIN -->
+                <td valign="top" width="33.33%" class="stack-column-center">
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr>
+                      <td style="padding: 20px;">
+                        <img src="assets/images/adidas.png" width="170" height="" alt="Adidas logo" border="0" style="width: 100%; max-width: 170px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; padding: 0 20px 20px; text-align: left;">
+                          <p style="margin: 0;"><a href="#adidas">$10 Adidas gift card<br>1000 points</a></p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <!-- Column : END -->
+
+                <!-- Column : BEGIN -->
+                <td valign="top" width="33.33%" class="stack-column-center">
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr>
+                      <td style="padding: 20px;">
+                        <img src="assets/images/puma.png" width="170" height="" alt="Puma logo" border="0" style="width: 100%; max-width: 170px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 15px; color: #555555;">
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; padding: 0 20px 20px; text-align: left;">
+                          <p style="margin: 0;"><a href="#puma">$20 Amcal Pharmacy<br>2000 points</a></p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+                <!-- Column : END -->
+
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- 3 Even Columns : END -->
+
+        <!-- Horizontal Rule : BEGIN -->
+        <tr>
+          <td width="100%" style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; padding: 40px; background-color: #ffffff; text-align: center;">
+            <footer> 
+              <h3 style="margin: 0 0 10px; font-size: 18px; line-height: 18px; color: #111826; font-weight: bold;">Get connected</h3>
+              <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="margin: auto">
+                <tr>
+                  <td style="padding: 10px;"><a href="#facebook"><img src="assets/images/icon-facebook.png" alt="Facebook"></a></td>
+                  <td style="padding: 10px;"><a href="#instragram"><img src="assets/images/icon-instragram.png" alt="Instagram"></a></td>
+                  <td style="padding: 10px;"><a href="#youtube"><img src="assets/images/icon-youtube.png" alt="Youtube"></a></td>
+                  <td style="padding: 10px;"><a href="#linkedin"><img src="assets/images/icon-linkedin.png" alt="Linkedin"></a></td>
+                  <td style="padding: 10px;"><a href="#twitter"><img src="assets/images/icon-twitter.png" alt="Twitter"></a></td>
+                </tr>
+              </table>
+            </footer>
+          </td>
+        </tr>
+        <!-- Horizontal Rule : END -->
+
 
         <!-- Horizontal Rule : BEGIN -->
         <tr>
