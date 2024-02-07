@@ -1,0 +1,432 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <style type="text/css">
+    body {
+      background: #ffffff;
+      width: 100% !important;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      margin: 0;
+      padding: 0;
+      font: 13px Arial;
+      background-color: #F6F6F6;
+    }
+
+    /* Client-specific Styles */
+    #outlook a {
+      padding: 0;
+    }
+
+    /* Force Outlook to provide a "view in browser" menu link. */
+    F a {
+      text-decoration: underline;
+      font-weight: normal;
+    }
+
+    /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/
+    .ExternalClass {
+      width: 100%;
+    }
+
+    /* Force Hotmail to display emails at full width */
+    .ExternalClass,
+    .ExternalClass p,
+    .ExternalClass span,
+    .ExternalClass font,
+    .ExternalClass td,
+    .ExternalClass div {
+      line-height: 100%;
+    }
+
+    /* Forces Hotmail to display normal line spacing.  */
+    #backgroundTable {
+      margin: 0;
+      padding: 0;
+      width: 100% !important;
+      line-height: 100% !important;
+    }
+
+    /* End reset */
+    /* Some sensible defaults for images */
+    img {
+      outline: none;
+      text-decoration: none;
+      -ms-interpolation-mode: bicubic;
+    }
+
+    a img {
+      border: none;
+    }
+
+    .image_fix {
+      display: block;
+    }
+
+    /* Yahoo paragraph fix */
+    p {
+      margin: 1em 0;
+    }
+
+    /* Outlook 07, 10 Padding issue fix */
+    table {
+      line-height: 21px;
+      font-size: 15px;
+      font-family: Arial, Verdana;
+    }
+
+    table td {
+      border-collapse: collapse;
+    }
+
+    @media only screen and (max-width:600px) {
+
+      .desktopcolumn
+      {
+
+      display:none;
+
+      }
+
+
+      table[class="outer"] {
+        background-color: #fff !important;
+        width: 320px !important;
+      }
+
+      td[id="mobiletext"] {
+        font-size: 17px !important;
+        line-height: 125% !important;
+      }
+
+      table[class="full-width"],
+      td[class="full-width"] {
+        width: 100% !important;
+      }
+
+      table[class="inner"] {
+        width: 90% !important;
+      }
+
+      td[class="auto-width"] {
+        width: auto !important;
+      }
+
+      td[class="float"] {
+        float: left !important;
+        width: 100% !important;
+      }
+
+      img[class="webOnly"],
+      table[class="webOnly"],
+      td[class="webOnly"],
+      br[class="webOnly"] {
+        display: none !important;
+      }
+
+      table[class="mobileOnly"],
+      td[class="mobileOnly"],
+      br[class="mobileOnly"],
+      span[class="mobileOnly"] {
+        display: block !important;
+      }
+
+      td[class="height-spacer"] {
+        height: 20px;
+         !important;
+      }
+
+      img[id="screenshot"] {
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      img[class="thumb"] {
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      td[class="mobwid"] {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+      }
+    }
+  </style>
+
+
+  <!--
+%%[
+VAR @First_Name, @Last_Name, @Title_Name, @Salutation, @var_value_4, @var_value_5, @var_value_6, @var_value_7, @var_value_8, @contactdetails, @contactdetails2, @subject_line, @preheader
+
+  SET @First_Name = [First Name]
+  SET @Last_Name = [Last Name]
+  SET @Title_Name = [Title Name]
+  SET @var_value_4 = [var_value_4]
+  SET @var_value_5 = [var_value_5]
+  SET @var_value_6 = [var_value_6]
+  SET @var_value_7 = [var_value_7]
+  SET @var_value_8 = [var_value_8]
+  SET @var_value_5 = ProperCase (@var_value_5)
+  SET @var_value_6 = ProperCase (@var_value_6)
+
+
+
+SET @preheader = Concat("Important update on our ",@VAR_VALUE_5," branch.")
+SET @var_value_4 = Format(StringToDate([Var_Value_4]),'dd MMMM')
+
+IF NOT EMPTY(@First_Name) THEN
+        SET @Salutation = Concat("Hi ",@first_name,",")
+    ELSEIF @first_name == "" AND @Title_name != "" AND @Last_name != "" THEN
+        SET @Salutation = Concat("Dear ",@title_name," ", @last_name,",")
+    ELSE
+        SET @Salutation = "Hi there,"
+    ENDIF
+
+
+   IF NOT Empty(@First_Name) THEN
+        SET @Subject_line = Concat(@first_name,", our ",@VAR_VALUE_5," branch hours are changing.")
+        ELSE
+        SET @Subject_line = Concat("Our ",@VAR_VALUE_5," branch hours are changing.")
+        ENDIF
+
+
+
+
+    if (@Var_Value_7 == "RBS" or @Var_Value_7 == "Premier") THEN
+      SET @contactdetails = 'Some services are available 24/7 – see <a href="https://www.commbank.com.au/support/contact-us.html" target="_blank" style="color:#000000;text-decoration:underline;">here</a> for more information.'
+      ELSE
+      SET @contactdetails = 'For business banking call us 24/7 on 13 1998. You can also get support <a href="https://www.commbank.com.au/support/contact-us.html" target="_blank" style="color:#000000;text-decoration:underline;">here</a> to find how to contact a specialist for your specific enquiry.'
+      ENDIF
+
+      if @Var_Value_8 == "Y" THEN
+        SET @contactdetails2 = ' Alternatively, please feel free to contact your Relationship Manager or call 13 1998 to speak to the Business Banking team.'
+        ELSEIF @Var_Value_8 == "N" THEN
+        SET @contactdetails2 = ' Alternatively, please call 13 1998 to speak to the Business Banking team.'
+        ENDIF
+
+
+
+
+ ]%%
+-->
+
+
+
+
+</head>
+
+<body>
+
+  <!-- Wrapper Table -->
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" id="backgroundTable">
+    <tr>
+      <td align="center" valign="top" bgcolor="#F6F6F6">
+        <!-- eDM content -->
+
+        <table height="1" align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="outer" width="599">
+          <tr>
+            <td width="599" height="1" align="center" valign="top" bgcolor="#F4F4F4">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" class="full-width" width="599">
+
+
+
+%%[ if _messageContext != "VAWP" then ]%%
+                <tr>
+                  <td align="center" bgcolor="#f6f6f6" valign="top" style="padding: 15px; font-size:11px; color:#6e6f72; line-height:17px; text-align: center" face="Arial, Helvetica, sans-serif">
+
+                    <a href="%%view_email_url%%#" target="_blank" style="color:#6e6f72;">View online</a>
+                  </td>
+                </tr>
+
+                %%[endif]%%
+
+
+                <tr>
+                  <td width="600" align="center" valign="bottom"><img alt="banner" height="152" src="https://image.edm.cba.com.au/lib/fe9313727563077e73/m/20/3df501b6-5008-4a9b-90c1-38b859d8e96c.jpg" style="border:0; display: block; color: #ffffff;" hspace="0" vspace="0" width="600" class="thumb" /></td>
+                </tr>
+                <tr>
+                  <td align="left" valign="top" bgcolor="#F6F6F6">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td valign="top" bgcolor="#ffffff" class="mobwid" id="mobiletext" style="padding:35px 65px 40px 55px; line-height:21px; font-family:Arial, Helvetica, sans serif; font-size:14px; color:#000000;">
+
+
+
+                                                  <span style="font-size: 22px;">Our %%=v(@var_value_5)=%% branch hours are changing.</span>
+  <br/>
+                          <br />
+
+                          %%=v(@salutation)=%%
+
+                          <br />
+                          <br />
+                          Each day, more of our customers are choosing to do their banking online or over the phone instead of visiting us in branch.
+                          <br />
+                          <br />
+                        To help meet this change in demand while maintaining our presence in %%=v(@var_value_6)=%%, we’re reducing the trading hours at the %%=v(@var_value_5)=%% branch.
+                          <br/>
+                          <br/>
+
+                        <b>What this means for you</b>
+
+
+                      <br/>
+
+                      From %%=v(@var_value_4)=%%, our %%=v(@var_value_5)=%% branch will open from 9.30am to 1pm, Monday to Friday, and will be available to assist you with your banking during these hours.
+
+                          <br />
+                          <br />
+
+                          Our team members will provide increased support to our online and phone banking services in the afternoon, while continuing to serve customers in the local community before 1pm.
+                          <br/><br/>
+
+                          <b>Alternative banking options</b><br/>
+
+                        We will continue to offer a range of other ways you can complete your everyday banking at times when our branches aren’t open, including our ATMs<sup>1</sup>. Please see the list below to find out what works for you. <br />
+                        <br />
+
+
+                          <table width="100%" border="0" cellpadding="0" cellspacing="0" style="line-height:21px; font-size:15px; color:#000000; text-align:left;">
+                            <tbody>
+                              <tr>
+                                <td colspan="1" width="50%" valign="top" align="left" class="float" style="line-height:21px; font-family:Arial, Helvetica, sans serif; font-size:14px; color:#000000;">
+
+                                <b>Online banking</b><br/>
+
+                                  There are a number of online banking options available 24/7, allowing you to bank with confidence – anywhere, anytime:
+                                  <br/>
+
+                                  <table width="100%" border="0">
+                                <tbody>
+                                <tr>
+                                <td width="5%" valign="top">&bull;</td>
+                                <td width="95%" style="font-size:14px;font-family:Arial, Helvetica, sans serif; line-height:21px; color:#000000; padding-left: 0px; ">CommBank app<sup>2</sup> - download the CommBank app on the App Store or get it on Google Play.</td>
+                                </tr>
+                                <tr>
+                                <td valign="top">&bull;</td>
+                                <td style="font-size:14px; line-height:21px; color:#000000; padding-left: 0px; font-family:Arial, Helvetica, sans serif;">NetBank - register for NetBank at the branch or online <a href="https://www.commbank.com.au/digital-banking/netbank.html" target="_blank" style="text-decoration: underline; color: #000000;">here.</a></td>
+
+
+                                </tr>
+
+                                <tr>
+                                <td valign="top">&bull;</td>
+                                <td style="font-size:14px; line-height:21px; color:#000000; padding-left: 0px; font-family:Arial, Helvetica, sans serif; ">CommBiz and CommBiz Mobile - for businesses requiring premium online banking with multiple levels of user access <a href="https://www.commbank.com.au/business/online-banking/commbiz.html" target="_blank" style="text-decoration: underline; color: #000000;">here.</a>
+
+
+
+                                  <br/>
+
+
+
+                                  </td>
+
+
+                                </tr>
+
+
+                                </tbody>
+                                </table>
+
+                                  If you’re new to online banking, we have many guides to help you <a href="https://www.commbank.com.au/digital-banking/how-to-guides.html" target="_blank" style="text-decoration: underline; color: #000000;">here.</a>
+
+                                  <br/>
+
+                                  <br/>
+
+                                   <b>  eftpos</b>
+
+
+<br/>
+
+                                  You can withdraw cash using eftpos at participating supermarkets and service centres<sup>1</sup>.
+
+                                <br/><br/>
+                                </td>
+
+
+    <td class="desktopcolumn" colspan="2" width="6%" style="line-height: 10px">&nbsp;</td>
+
+
+
+                                <td collspan="3" width="50%" valign="top" align="left" class="float" style="line-height:21px; font-family:Arial, Helvetica, sans serif; font-size:14px; color:#000000;">
+
+
+                                                                    <b>Australia Post</b><br/>
+
+                                  You can use Bank@Post to complete personal and business banking transactions such as withdrawals and deposits<sup>3</sup>, cash exchanges and bill payments<sup>1</sup>, including passbooks. Locate your nearest participating post office <a href="https://auspost.com.au/locate/" target="_blank" style="text-decoration: underline; color: #000000;">here.</a>
+                                  <br/><br/>
+
+
+                                       <b>Phone banking</b>
+
+                                  <br/>
+                                  Through our Australian-based call centres, you can contact us on 13 2221 from 6am to 10pm daily for general enquiries. %%=v(@contactdetails)=%% You can also get support here to find how to contact a specialist for your specific enquiry.
+
+<br/><br/>
+
+
+                                </td>
+
+                              </tr>
+
+
+
+                            </tbody>
+                          </table>
+
+
+                         <b>We’re here to help</b><br/>
+                          The team at our %%=v(@var_value_5)=%% branch will be available to help you through this transition and answer any questions you may have.%%=v(@contactdetails2)=%%<br />
+                          <br />
+
+
+
+
+                          Yours sincerely,<br />
+
+                          <b>The CommBank Team</b>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left" valign="top" bgcolor="#ebebeb" style="padding:30px 55px 30px 55px; font-family: arial, sans-serif; font-size:10px; line-height:14px; color:#000000;" class="mobwid">
+
+                    <b>Things you should know:</b>
+                    <br />
+                    <p> <sup>1</sup> Transaction limits and fees may apply.
+                      <br />
+                      <sup>2</sup> The CommBank app is free to download; however, your mobile network provider charges you for accessing data on your phone. The app is available on Android operating system 6.0+ and iOS operating system 12.0+. Terms and conditions are available on the app. NetBank access with NetCode SMS required.  <br />
+
+                      <sup>3</sup> For primary linked accounts.</p>
+
+                      <p>This email was sent from an address that cannot accept incoming email. To contact us, please visit the <a href="https://www.commbank.com.au/support/contact-us" target="_blank" style="text-decoration: underline; color: #000000;">Contact Us</a> section of our website. To see how we protect your information view our <a href="https://www.commbank.com.au/support/privacy.html" target="_blank" style="text-decoration: underline; color: #000000;">Privacy Policy.</a></p>
+
+                      <p> This email contains important information or updates about your service and as such you cannot unsubscribe from these types of messages.</p>
+
+                      <p>Commonwealth Bank of Australia ABN 48 123 123 124.</p>
+
+
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+
+        <!-- End of eDM content -->
+      </td>
+    </tr>
+  </table>
+  <custom name="opencounter" type="tracking" />
+  <img src="https://pixel.app.returnpath.net/pixel.gif?r=e5fee703c11365f69757d317d4830bf5bfe37909&c=%%Campaign ID%%&Template ID=%%Template ID%%" width="1" height="1" />
+  <!-- End of Wrapper Table -->
+</body>
+
+</html>
