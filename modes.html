@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Test file</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico">
+  <meta name="color-scheme" content="light dark">
+  <style>
+html, body {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 40em;
+  margin: 0;
+  padding: 1em 2em 1.5em;
+  font-size: 1.2em;
+  line-height: 1.4;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, sans-serif;
+}
+
+p {
+  margin: 1em 0 1.5em;
+  line-height: 1.5;
+}
+
+
+h1,
+h2 {
+  line-height: 1.2;
+  font-weight: 600;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, sans-serif;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2em;
+  color: red;
+}
+
+h2 {
+  margin: 2em 0 .5em;
+  font-size: 1.5em;
+  color: red;
+}
+
+@media (prefers-color-scheme: dark) {
+  h2 { color: yellow; }
+}
+
+.test2 {
+  background: #eee;
+  padding: 1em;
+  color: #333;
+}
+
+.test a:link {
+  color: #0A7399;
+  background: transparent;
+}
+
+.test a:visited {
+  color: #086D91;
+  background: transparent;
+}
+
+.test a:hover {
+  color: #007700;
+  background: transparent;
+}
+
+.test a:focus {
+  color: #fff;
+  background: #000;
+}
+
+.test a:active {
+  color: #AA0000;
+  background: transparent;
+}
+
+form {
+  margin: 2em 0;
+}
+
+fieldset {
+  border: 0;
+  margin: 2em 0;
+  padding: 0;
+}
+
+legend {
+  font-weight: bold;
+}
+
+.form-group {
+  margin: 0 0 1.5em;
+}
+
+.form-list {
+  margin: 0.5em 0;
+  padding: 0;
+  list-style: none;
+}
+
+.label {
+  display: block;
+  margin: 0 0 0.3em;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #999;
+  font-size: 1em;
+  line-height: 1;
+  font-family: helvetica, arial, sans-serif;
+}
+
+.input:focus {
+  outline: 2px solid #000;
+}
+
+.input:hover {
+  outline: 2px solid green;
+}
+
+.button,
+button {
+  display: inline-block;
+  padding: 0.75em 1em;
+  border: 0;
+  text-decoration: none;
+  border-radius: 0.2em;
+  font-size: 1em;
+  line-height: 1;
+  font-family: helvetica, arial, sans-serif;
+}
+
+.button:focus,
+button:focus {
+  background: #000;
+  color: #fff;
+  outline: none;
+}
+
+.button:hover,
+button:hover {
+  background: green;
+  color: #fff;
+}
+
+.button:active,
+button:active {
+  background: red;
+  color: #fff;
+}
+
+  </style>
+</head>
+<body>
+
+  <h1>Test file</h1>
+
+  <div class="container1">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum sit reprehenderit architecto unde dicta nisi sequi quibusdam necessitatibus veritatis repudiandae, obcaecati doloribus iure sapiente atque ullam dignissimos, maiores, omnis eum!</p>
+  </div>
+
+  <h2>Heading level 2</h2>
+  <p class="test2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum sit reprehenderit architecto unde dicta nisi sequi quibusdam necessitatibus veritatis repudiandae, obcaecati doloribus iure sapiente atque ullam dignissimos, maiores, omnis eum!</p>
+
+  <p><a href="#">Dummy link before form</a></p>
+  <p class="test"><a href="#">Dummy link before form</a></p>
+
+
+  <form action="#">
+    <div class="form-group">
+      <label class="label" for="name">Full name</label>
+      <input class="input" id="name" type="text">
+    </div>
+     <div class="form-group">
+      <label class="label" for="email">Email</label>
+      <input class="input" id="email" type="email">
+    </div>
+     <div class="form-group">
+      <label class="label" for="comment">Comment</label>
+      <div class="help-text" id="help1">No more than 200 characters</div>
+      <textarea class="input" id="comment" rows="4" aria-describedby="help1"></textarea>
+    </div>
+    <div class="form-group">
+      <label class="label" for="mammal">Favourite mammal</label>
+      <select class="input" id="mammal4">
+        <option>Choose a mammal</option>
+        <option>Aardvark</option>
+        <option>African Elephant</option>
+        <option>African Wild Dog</option>
+        <option>African Lion</option>
+        <option>Arctic Fox</option>
+        <option>Arctic Hare</option>
+        <option>Armadillo</option>
+        <option>Asian Elephant</option>
+        <option>Asian Lion</option>
+        <option>Aye-Aye</option>
+      </select>
+    </div>
+
+    <fieldset class="fieldset">
+      <legend>Subscription method</legend>
+      <ul class="form-list">
+        <li>
+          <input class="input-radio" id="we" type="radio" name="sub">
+          <label for="we">Weekly</label>
+        </li>
+        <li>
+          <input class="input-radio" id="qu" type="radio" name="sub">
+          <label for="qu">Quarterly</label>
+        </li>
+        <li>
+          <input class="input-radio" id="ye" type="radio" name="sub">
+          <label for="ye">Yearly</label>
+        </li>
+      </ul>
+    </fieldset>
+    <div class="form-group">
+      <button>Submit</button>
+    </div>
+  </form>
+
+
+
+</body>
+</html>
