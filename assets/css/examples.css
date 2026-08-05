@@ -350,3 +350,22 @@ a[download] {
   border-radius: 4px;
   padding: 0.1em 0.6em;
 }
+
+/* ----------- 
+Intopia logo
+----------- */
+
+.intopia-home-link {
+  display: inline-block;
+  margin: 0 0 2em;
+}
+
+a.intopia-home-link:focus {
+  color: #fff;
+  background: transparent;
+  outline: 2px solid #000;
+}
+
+.intopia-logo {
+  width: 180px;
+}
